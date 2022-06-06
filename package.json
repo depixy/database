@@ -7,6 +7,7 @@
   "scripts": {
     "prebuild": "rimraf lib && prisma generate",
     "build": "tsc",
+    "lint": "eslint --ext .ts src",
     "generate": "prisma generate",
     "migrate": "prisma migrate",
     "migrate:create": "prisma migrate dev --create-only",
