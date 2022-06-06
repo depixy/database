@@ -1,0 +1,76 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id             String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  loginName      String   @unique @map("login_name")
+  displayName    String   @unique @map("display_name")
+  email          String   @unique
+  hashedPassword String
+  role           String
+  createdAt      DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt      DateTime @default(now()) @map("updated_at") @db.Timestamp(6)
+  images         Image[]
+  posts          Post[]
+
+  @@map("user")
+}
+
+model Post {
+  id          String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  slug        String   @unique
+  name        String
+  tags        Tag[]
+  images      Image[]
+  description String
+  userId      String   @map("user_id") @db.Uuid
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  delete      Boolean  @default(false)
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt   DateTime @default(now()) @map("updated_at") @db.Timestamp(6)
+
+  @@map("post")
+}
+
+model Image {
+  id        String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  postId    String   @map("post_id") @db.Uuid
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  number    Int
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+
+  @@unique([postId, number])
+  @@map("image")
+}
+
+model Tag {
+  id         String      @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  slug       String      @unique
+  name       String      @unique
+  categoryId String      @map("category_id") @db.Uuid
+  category   TagCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  posts      Post[]
+  createdAt  DateTime    @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt  DateTime    @default(now()) @map("updated_at") @db.Timestamp(6)
+
+  @@map("tag")
+}
+
+model TagCategory {
+  id        String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  slug      String   @unique
+  name      String   @unique
+  tags      Tag[]
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt DateTime @default(now()) @map("updated_at") @db.Timestamp(6)
+
+  @@map("tag_category")
+}
