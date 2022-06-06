@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/depixy/database/compare/v2.0.0...v2.0.1) (2022-06-06)
+
+
+### Bug Fixes
+
+* move prisma to devDependencies ([a030f60](https://github.com/depixy/database/commit/a030f60cfc51c87f6ace1ed769855f46c44a09ae))
+
 ## [2.0.0](https://github.com/depixy/database/compare/v2.0.0...v2.0.0) (2022-06-06)
 
 
