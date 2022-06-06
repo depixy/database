@@ -14,7 +14,10 @@
     "studio": "prisma studio",
     "postinstall": "npx prisma generate"
   },
-  "keywords": [],
+  "keywords": [
+    "depixy",
+    "depixy-plugin"
+  ],
   "homepage": "https://github.com/depixy/database#readme",
   "repository": {
     "type": "git",
