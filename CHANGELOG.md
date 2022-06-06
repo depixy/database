@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0](https://github.com/depixy/database/compare/v2.0.0...v2.0.0) (2022-06-06)
+
+
+### Continuous Integration
+
+* release 2.0.0 ([c69b98d](https://github.com/depixy/database/commit/c69b98dcdc7b0ab54fcd025bc9d9bb6eefb6aae8))
+
 ## 2.0.0 (2022-06-06)
 
 
