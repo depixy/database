@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/depixy/database/compare/v2.0.2...v2.1.0) (2022-06-07)
+
+
+### Features
+
+* add logging and error format ([5769d9c](https://github.com/depixy/database/commit/5769d9cdb83d3b882a2c0147171023ce1505d815))
+* add user token ([5441947](https://github.com/depixy/database/commit/54419470b92020e7e4d05230e85f3e22beaa330d))
+
 ## [2.0.2](https://github.com/depixy/database/compare/v2.0.1...v2.0.2) (2022-06-06)
 
 
