@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/depixy/database/compare/v2.1.0...v2.2.0) (2022-06-08)
+
+
+### Features
+
+* add esm module support ([1118bf4](https://github.com/depixy/database/commit/1118bf46506a740b385cb7f4aa618d95b29be92e))
+
 ## [2.1.0](https://github.com/depixy/database/compare/v2.0.2...v2.1.0) (2022-06-07)
 
 
