@@ -1,4 +1,4 @@
-import fastifyPlugin from "fastify-plugin";
+import { default as fastifyPlugin } from "fastify-plugin";
 import { PrismaClient } from "@prisma/client";
 
 import type { Prisma } from "@prisma/client";

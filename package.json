@@ -2,20 +2,35 @@
   "name": "@depixy/database",
   "version": "2.1.0",
   "description": "",
-  "main": "./lib/index.js",
-  "typings": "./src/index.ts",
+  "main": "./lib/cjs/index.js",
+  "typings": "./lib/cjs/index.d.ts",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "prebuild": "rimraf lib && prisma generate",
-    "build": "tsc",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --module node16 --outDir lib/esm",
+    "build:cjs": "tsc --module CommonJS --outDir lib/cjs",
     "lint": "eslint --ext .ts src",
     "generate": "prisma generate",
     "migrate": "prisma migrate",
     "migrate:create": "prisma migrate dev --create-only",
     "studio": "prisma studio",
     "postinstall": "npx prisma generate"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/esm/index.d.ts",
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "types": "./lib/cjs/index.d.ts",
+        "default": "./lib/cjs/index.js"
+      }
+    }
   },
   "keywords": [
     "depixy",
@@ -37,16 +52,16 @@
     "prisma"
   ],
   "dependencies": {
-    "@prisma/client": "^3.14.0",
+    "@prisma/client": "^3.15.0",
     "fastify-plugin": "^3.0.1"
   },
   "devDependencies": {
     "@joshuaavalon/eslint-config-typescript": "^6.1.4",
-    "@types/node": "^17.0.40",
+    "@types/node": "^16.11.39",
     "eslint": "^8.17.0",
     "fastify": "^3.29.0",
     "prettier": "^2.6.2",
-    "prisma": "^3.14.0",
+    "prisma": "^3.15.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.3"
   }
