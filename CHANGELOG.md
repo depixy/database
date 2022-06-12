@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/depixy/database/compare/v2.2.0...v2.2.1) (2022-06-12)
+
+
+### Bug Fixes
+
+* update dependencies ([7d8fb22](https://github.com/depixy/database/commit/7d8fb22892bc8668a1fbef9f75fcfafa9187357c))
+
 ## [2.2.0](https://github.com/depixy/database/compare/v2.1.0...v2.2.0) (2022-06-08)
 
 
