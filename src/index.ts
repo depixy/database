@@ -46,7 +46,7 @@ const plugin = fastifyPlugin<DepixyDatabaseOptions>(
   },
   {
     name: "@depixy/database",
-    fastify: "3.x"
+    fastify: "4.x"
   }
 );
 
