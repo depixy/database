@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/depixy/database/compare/v2.2.1...v2.2.2) (2022-06-13)
+
+
+### Bug Fixes
+
+* plugin fastify version ([45d328a](https://github.com/depixy/database/commit/45d328ae67aab9f584265d28180fb187e5e4f11e))
+
 ## [2.2.1](https://github.com/depixy/database/compare/v2.2.0...v2.2.1) (2022-06-12)
 
 
