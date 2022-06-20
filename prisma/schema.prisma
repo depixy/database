@@ -19,8 +19,18 @@ model User {
   images         Image[]
   posts          Post[]
   tokens         UserToken[]
+  roles          Role[]
 
   @@map("user")
+}
+
+model Role {
+  id       String  @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name     String  @unique
+  editable Boolean
+  users    User[]
+
+  @@map("role")
 }
 
 model UserToken {
