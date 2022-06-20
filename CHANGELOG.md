@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/depixy/database/compare/v2.2.2...v2.3.0) (2022-06-20)
+
+
+### Features
+
+* add role ([ffa65e6](https://github.com/depixy/database/commit/ffa65e664adb5aa3313bed2f24f885af4ee498e3))
+
 ## [2.2.2](https://github.com/depixy/database/compare/v2.2.1...v2.2.2) (2022-06-13)
 
 
