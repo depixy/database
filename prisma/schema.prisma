@@ -19,8 +19,20 @@ model User {
   images         Image[]
   posts          Post[]
   tokens         UserToken[]
+  roles          Role[]
 
   @@map("user")
+}
+
+model Role {
+  id        String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name      String   @unique
+  editable  Boolean
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt DateTime @default(now()) @map("updated_at") @db.Timestamp(6)
+  users     User[]
+
+  @@map("role")
 }
 
 model UserToken {
