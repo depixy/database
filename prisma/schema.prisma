@@ -13,7 +13,6 @@ model User {
   displayName    String      @unique @map("display_name")
   email          String      @unique
   hashedPassword String
-  role           String
   createdAt      DateTime    @default(now()) @map("created_at") @db.Timestamp(6)
   updatedAt      DateTime    @default(now()) @map("updated_at") @db.Timestamp(6)
   images         Image[]
