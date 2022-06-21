@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/depixy/database/compare/v2.3.0...v2.3.1) (2022-06-21)
+
+
+### Bug Fixes
+
+* remove unused role ([dc385d7](https://github.com/depixy/database/commit/dc385d7761910be777efefbbc4e6eeb779d38229))
+
 ## [2.3.0](https://github.com/depixy/database/compare/v2.2.2...v2.3.0) (2022-06-20)
 
 
