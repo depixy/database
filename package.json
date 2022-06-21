@@ -1,6 +1,6 @@
 {
   "name": "@depixy/database",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "",
   "main": "./lib/cjs/index.js",
   "typings": "./lib/cjs/index.d.ts",
