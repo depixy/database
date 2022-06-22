@@ -30,5 +30,5 @@ ALTER TABLE "_RoleToUser" ADD CONSTRAINT "_RoleToUser_A_fkey" FOREIGN KEY ("A") 
 -- AddForeignKey
 ALTER TABLE "_RoleToUser" ADD CONSTRAINT "_RoleToUser_B_fkey" FOREIGN KEY ("B") REFERENCES "user"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
-INSERT INTO TABLE "role" ("name", "editable") VALUES('user', FALSE);
-INSERT INTO TABLE "role" ("name", "editable") VALUES('admin', FALSE);
+INSERT INTO "role" ("name", "editable") VALUES('user', FALSE);
+INSERT INTO "role" ("name", "editable") VALUES('admin', FALSE);
