@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.2](https://github.com/depixy/database/compare/v2.3.1...v2.3.2) (2022-06-22)
+
+
+### Bug Fixes
+
+* sql ([c3cf0f4](https://github.com/depixy/database/commit/c3cf0f45c1ac01cd46120931e24177477ea1e463))
+
 ## [2.3.1](https://github.com/depixy/database/compare/v2.3.0...v2.3.1) (2022-06-21)
 
 
