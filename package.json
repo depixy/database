@@ -2,17 +2,15 @@
   "name": "@depixy/database",
   "version": "2.3.2",
   "description": "",
-  "main": "./lib/cjs/index.js",
-  "typings": "./lib/cjs/index.d.ts",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "prebuild": "rimraf lib && prisma generate",
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc --module node16 --outDir lib/esm",
-    "build:cjs": "tsc --module CommonJS --outDir lib/cjs",
+    "build": "tsc",
     "lint": "eslint --ext .ts src",
     "generate": "prisma generate",
     "migrate": "prisma migrate",
@@ -23,12 +21,8 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/esm/index.d.ts",
-        "default": "./lib/esm/index.js"
-      },
-      "require": {
-        "types": "./lib/cjs/index.d.ts",
-        "default": "./lib/cjs/index.js"
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
       }
     }
   },
