@@ -3,6 +3,7 @@ CREATE TABLE "user_token" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),
     "description" TEXT NOT NULL,
     "user_id" UUID NOT NULL,
+    "expired_on" TIMESTAMP(6),
     "created_at" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
