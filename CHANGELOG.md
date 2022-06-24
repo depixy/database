@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/depixy/database/compare/v2.4.0...v2.5.0) (2022-06-24)
+
+
+### Features
+
+* add expiredOn for UserToken ([3254e01](https://github.com/depixy/database/commit/3254e0175c2ee3a9d83af89a95ea2e132a2f0879))
+
 ## [2.4.0](https://github.com/depixy/database/compare/v2.3.2...v2.4.0) (2022-06-23)
 
 
