@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/depixy/database/compare/v2.5.0...v2.6.0) (2022-08-02)
+
+
+### Features
+
+* update prisma ([256c2b1](https://github.com/depixy/database/commit/256c2b1402b4f801adc113820a696272b41b759e))
+
 ## [2.5.0](https://github.com/depixy/database/compare/v2.4.0...v2.5.0) (2022-06-24)
 
 
