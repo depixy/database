@@ -31,6 +31,7 @@ CREATE TABLE "image" (
     "user_id" UUID NOT NULL,
     "post_id" UUID NOT NULL,
     "number" INTEGER NOT NULL,
+    "mime" TEXT NOT NULL,
     "created_at" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "image_pkey" PRIMARY KEY ("id")
